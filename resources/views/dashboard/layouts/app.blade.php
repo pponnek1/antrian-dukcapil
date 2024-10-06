@@ -1,6 +1,6 @@
 <!doctype html>
 
-<html lang="en" class="light-style layout-wide customizer-hide" dir="ltr" data-theme="theme-default"
+<html lang="en" class="light-style layout-wide customizer-hide" dir="ltr" data-theme="theme-semi-dark"
     data-assets-path="../../assets/" data-template="vertical-menu-template-no-customizer" data-style="light">
 
 <head>
@@ -13,7 +13,7 @@
     <meta name="description" content="" />
 
     <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="../../assets/img/favicon/favicon.ico" />
+    <link rel="icon" type="image/x-icon" href="{{ asset("assets/img/logo/logo-kab-klaten.png") }}" />
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -30,7 +30,7 @@
     <!-- Core CSS -->
 
     <link rel="stylesheet" href="{{ asset('assets/vendor/css/rtl/core.css') }}" />
-    <link rel="stylesheet" href="{{ asset('assets/vendor/css/rtl/theme-default.css') }}" />
+    <link rel="stylesheet" href="{{ asset('assets/vendor/css/rtl/theme-semi-dark.css') }}" />
 
     <link rel="stylesheet" href="{{ asset('assets/css/demo.css') }}" />
 

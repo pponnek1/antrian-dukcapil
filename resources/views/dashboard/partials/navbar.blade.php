@@ -6,7 +6,28 @@
         </a>
     </div>
 
+    {{-- navbar --}}
     <div class="navbar-nav-right d-flex align-items-center" id="navbar-collapse">
+
+        {{-- fitur lihat waktu dan tanggal --}}
+        <?php
+                        date_default_timezone_set('Asia/Jakarta');
+                        $tanggal = date('d-m-Y');
+                        $jam = date('H:i:s');
+                    ?>
+
+        <button type="button" class="btn btn-outline-primary" id="jam">Jam : {{ $jam }} || Tanggal : {{ $tanggal
+            }}</button>
+        <script>
+            function updateJam() {
+                      var jam = new Date().toLocaleTimeString('en-US', { hour12: false });
+                      document.getElementById("jam").innerHTML = "Jam : " + jam + " || Tanggal : {{ $tanggal }}";
+                    }
+                    setInterval(updateJam, 1000); // memperbarui setiap 1 detik
+        </script>
+
+        {{-- /fitur lihat waktu dan tanggal --}}
+
         <ul class="navbar-nav flex-row align-items-center ms-auto">
             <!-- User -->
             <li class="nav-item navbar-dropdown dropdown-user dropdown">
@@ -70,4 +91,5 @@
             <!--/ User -->
         </ul>
     </div>
+    {{-- /navbar --}}
 </nav>
