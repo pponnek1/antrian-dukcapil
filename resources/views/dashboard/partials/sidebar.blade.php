@@ -1,99 +1,76 @@
-<aside id="layout-menu" class="layout-menu menu-vertical menu bg-menu-theme">
+<aside id="layout-menu" class="layout-menu menu-vertical menu bg-menu-theme" data-bg-class="bg-menu-theme">
     <div class="app-brand demo" style="padding-top: 15px">
-        <a href="/" class="app-brand-link">
-            <span class="app-brand-logo">
-                <img src="{{ asset('assets/img/logo/logo-kab-klaten.png') }}" alt="logo" width="42" height="52" />
-            </span>
-            <span class="app-brand-text demo menu-text fw-bold">DUKCAPIL.</span>
-        </a>
+        <span class="app-brand-logo">
+            <img src="{{ asset('assets/img/logo/logo-kab-klaten.png') }}" alt="logo" width="42" height="52" />
+        </span>
+        <span class="app-brand-text demo menu-text fw-bold">DUKCAPIL.</span>
+    </a>
 
         <a href="javascript:void(0);" class="layout-menu-toggle menu-link text-large ms-auto">
             <i class="ti menu-toggle-icon d-none d-xl-block align-middle"></i>
             <i class="ti ti-x d-block d-xl-none ti-md align-middle"></i>
-        </a>>
+        </a>
     </div>
 
-    <div class="menu-inner-shadow"></div>
+    <div class="menu-inner-shadow" style="display: none;"></div>
 
     <ul class="menu-inner py-1">
-
-        <!-- Divider -->
-        <li class="menu-divider"></li>
-
-        <!-- Dashboard -->
-        <li class="menu-item">
+        <!-- Dashboards -->
+        <li class="menu-item" style="">
             <a href="/dashboard" class="menu-link">
-                <i class="menu-icon fas fa-tachometer-alt"></i>
-                <div>Dashboard</div>
+                <i class="menu-icon tf-icons ti ti-smart-home"></i>
+                <div data-i18n="Dashboards">Dashboards</div>
             </a>
         </li>
 
-        <!-- Divider -->
-        <li class="menu-divider"></li>
-
-        <!-- Heading: Menu Antrian -->
-        <li class="menu-header small text-uppercase">
-            <span class="menu-header-text">Menu Antrian</span>
+        <!-- Apps & Pages -->
+        <li class="menu-header small">
+            <span class="menu-header-text" data-i18n="Menu Antrian">Menu Antrian</span>
         </li>
-
-        <!-- Antrian -->
         <li class="menu-item">
             <a href="/dashboard/antrian" class="menu-link">
-                <i class="menu-icon fas fa-list-alt"></i>
-                <div>Antrian</div>
+                <i class="menu-icon tf-icons ti ti-list-numbers"></i>
+                <div data-i18n="Antrian">Antrian</div>
             </a>
         </li>
-
-        <!-- Antrian Masuk (Collapse Menu) -->
-        <li class="menu-item">
-            <a href="#" class="menu-link menu-toggle" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                <i class="menu-icon fas fa-users"></i>
-                <div>Antrian Masuk</div>
+        <li class="menu-item active:">
+            <a href="javascript:void(0);" class="menu-link menu-toggle">
+                <i class="menu-icon tf-icons ti ti-layout-sidebar"></i>
+                <div data-i18n="Panggil Antrian">Panggil Antrian</div>
             </a>
-            <ul id="collapseTwo" class="menu-sub collapse" aria-labelledby="headingTwo" data-bs-parent="#layout-menu">
-                <li class="menu-item">
-                    <h6 class="menu-header">Berdasarkan Layanan</h6>
-                </li>
+            <ul class="menu-sub">
+                <h6 class="menu-header">Berdasarkan Layanan</h6>
                 @foreach ($antrians as $antrian)
-                    <li class="menu-item">
-                        <a href="/dashboard/antrian-masuk/{{ $antrian->slug }}" class="menu-link">
-                            <div>{{ $antrian->nama_layanan }}</div>
-                        </a>
-                    </li>
+                <li class="menu-item">
+                    <a href="/dashboard/antrian-masuk/{{ $antrian->slug }}" class="menu-link">
+                        <div>{{ $antrian->nama_layanan }}</div>
+                    </a>
+                </li>
                 @endforeach
             </ul>
         </li>
 
-        <!-- Divider -->
-        <li class="menu-divider"></li>
-
-        <!-- Heading: Data Master -->
-        <li class="menu-header small text-uppercase">
-            <span class="menu-header-text">Data Master</span>
+            <!-- Data Master -->
+        <li class="menu-header small">
+            <span class="menu-header-text" data-i18n="Data Master">Data Master</span>
         </li>
-
-        <!-- Layanan -->
         <li class="menu-item">
             <a href="/dashboard/layanan" class="menu-link">
-                <i class="menu-icon fas fa-headset"></i>
-                <div>Layanan</div>
+                <i class="menu-icon tf-icons ti ti-align-box-bottom-right"></i>
+                <div data-i18n="Layanan">Layanan</div>
             </a>
         </li>
-
-        <!-- Laporan -->
         <li class="menu-item">
-            <a href="/laporan" class="menu-link">
-                <i class="menu-icon fas fa-book"></i>
-                <div>Laporan</div>
+            <a href="/dashboard/laporan" class="menu-link">
+                <i class="menu-icon tf-icons ti ti-clipboard"></i>
+                <div data-i18n="Laporan">Laporan</div>
             </a>
         </li>
-
-        <!-- Divider -->
-        <li class="menu-divider"></li>
-
-        <!-- Sidebar Toggler -->
-        <li class="menu-item text-center d-none d-md-inline">
-            <button class="rounded-circle border-0" id="sidebarToggle"></button>
-        </li>
+        <div class="ps__rail-x" style="left: 0px; bottom: 0px;">
+            <div class="ps__thumb-x" tabindex="0" style="left: 0px; width: 0px;"></div>
+        </div>
+        <div class="ps__rail-y" style="top: 0px; height: 1136px; right: 4px;">
+            <div class="ps__thumb-y" tabindex="0" style="top: 0px; height: 809px;"></div>
+        </div>
     </ul>
 </aside>

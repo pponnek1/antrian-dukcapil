@@ -1,6 +1,6 @@
 <!doctype html>
 
-<html lang="en" class="light-style layout-wide customizer-hide" dir="ltr" data-theme="theme-semi-dark"
+<html lang="en" class="light-style layout-navbar-fixed layout-menu-fixed layout-compact" dir="ltr" data-theme="theme-semi-dark"
     data-assets-path="../../assets/" data-template="vertical-menu-template-no-customizer" data-style="light">
 
 <head>
