@@ -41,10 +41,12 @@
     <link rel="stylesheet" href="{{ asset('assets/vendor/libs/typeahead-js/typeahead.css') }}" />
     <!-- Vendor -->
     <link rel="stylesheet" href="{{ asset('assets/vendor/libs/@form-validation/form-validation.css') }}" />
-
+    <link rel="stylesheet" href="{{ asset('assets/vendor/libs/apex-charts/apex-charts.css') }}" />
+    <link rel="stylesheet" href="{{ asset('assets/vendor/libs/swiper/swiper.css') }}" />
     <!-- Page CSS -->
     <!-- Page -->
     <link rel="stylesheet" href="{{ asset('assets/vendor/css/pages/page-auth.css') }}" />
+    <link rel="stylesheet" href="{{ asset('assets/vendor/css/pages/cards-advance.css') }}" />
 
     <!-- Helpers -->
     <script src="{{ asset('assets/vendor/js/helpers.js') }}"></script>
@@ -114,12 +116,15 @@
     <script src="{{ asset('assets/vendor/libs/@form-validation/popular.js') }}"></script>
     <script src="{{ asset('assets/vendor/libs/@form-validation/bootstrap5.js') }}"></script>
     <script src="{{ asset('assets/vendor/libs/@form-validation/auto-focus.js') }}"></script>
+    <script src="{{ asset('assets/vendor/libs/apex-charts/apexcharts.js') }}"></script>
+    <script src="{{ asset('assets/vendor/libs/swiper/swiper.js') }}"></script>
 
     <!-- Main JS -->
     <script src="{{ asset('assets/js/main.js') }}"></script>
 
     <!-- Page JS -->
     <script src="{{ asset('assets/js/pages-auth.js') }}"></script>
+    <script src="{{ asset('assets/js/cards-advance.js') }}"></script>
 </body>
 
 </html>

@@ -4,12 +4,12 @@
 <head>
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <title>@yield('title', 'Starter Page - Gp Bootstrap Template')</title>
+    <title>@yield('title', 'e-Dukcapil.')</title>
     <meta name="description" content="">
     <meta name="keywords" content="">
 
     <!-- Favicons -->
-    <link href="{{ asset('homepage/img/favicon.png') }}" rel="icon">
+    <link href="{{ asset('assets/img/logo/logo-kab-klaten.png') }}" rel="icon">
     <link href="{{ asset('homepage/img/apple-touch-icon.png') }}" rel="apple-touch-icon">
 
     <!-- Fonts -->

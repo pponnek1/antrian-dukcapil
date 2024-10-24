@@ -10,22 +10,23 @@
       <div class="navbar-nav align-items-center">
         <div class="nav-item navbar-search-wrapper mb-0">
             <?php
-                        date_default_timezone_set('Asia/Jakarta');
-                        $tanggal = date('d-m-Y');
-                        $jam = date('H:i:s');
-                    ?>
+                date_default_timezone_set('Asia/Jakarta');
+                $tanggal = date('d-m-Y');
+                $jam = date('H:i:s');
+            ?>
 
-        <button type="button" class="btn btn-outline-primary" id="jam">Jam : {{ $jam }} || Tanggal : {{ $tanggal
-            }}</button>
-        <script>
-            function updateJam() {
-                      var jam = new Date().toLocaleTimeString('en-US', { hour12: false });
-                      document.getElementById("jam").innerHTML = "Jam : " + jam + " || Tanggal : {{ $tanggal }}";
-                    }
-                    setInterval(updateJam, 1000); // memperbarui setiap 1 detik
-        </script>
+            <!-- Tambahkan kelas responsif Bootstrap -->
+            <button type="button" class="btn btn-outline-primary btn-sm btn-block" id="jam">Jam : {{ $jam }} || Tanggal : {{ $tanggal }}</button>
+
+            <script>
+                function updateJam() {
+                    var jam = new Date().toLocaleTimeString('en-US', { hour12: false });
+                    document.getElementById("jam").innerHTML = "Jam : " + jam + " || Tanggal : {{ $tanggal }}";
+                }
+                setInterval(updateJam, 1000); // memperbarui setiap 1 detik
+            </script>
         </div>
-      </div>
+    </div>
       <!-- /Search -->
 
       <ul class="navbar-nav flex-row align-items-center ms-auto">
