@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ScreenAddController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\dashboard\DashboardController;
+use App\Http\Controllers\dashboard\DashboardLayananController;
 
 // Route::get('/', function () {
 //     return view('welcome');
@@ -12,9 +13,9 @@ use App\Http\Controllers\dashboard\DashboardController;
 
 Route::get('/',[ScreenAddController::class, 'index']);
 
-Route::get('/dashboard', function () {
-    return view('dashboard.index');
-})->middleware(['auth', 'verified'])->name('dashboard');
+// Route::get('/dashboard', function () {
+//     return view('dashboard.index');
+// })->middleware(['auth', 'verified'])->name('dashboard');
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
@@ -22,7 +23,12 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
-Route::get('/test',[HomeController::class, 'index']);
-Route::get('/ping',[DashboardController::class, 'index']);
+Route::middleware(['auth', 'role:admin'])->group(function(){
+    Route::get('/test',[HomeController::class, 'index']);
+    Route::get('/dashboard',[DashboardController::class, 'index']);
+    route::resource('/dashboard/layanan', DashboardLayananController::class);
+});
+
+
 
 require __DIR__.'/auth.php';

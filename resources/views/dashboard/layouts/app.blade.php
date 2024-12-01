@@ -125,6 +125,9 @@
     <!-- Page JS -->
     <script src="{{ asset('assets/js/pages-auth.js') }}"></script>
     <script src="{{ asset('assets/js/cards-advance.js') }}"></script>
+
+    {{-- alert --}}
+    @include('sweetalert::alert')
 </body>
 
 </html>
