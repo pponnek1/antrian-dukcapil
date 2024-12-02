@@ -47,7 +47,7 @@
                                     method="POST" class="m-0 p-0">
                                     @method('DELETE')
                                     @csrf
-                                    <button type="button" class="btn btn-label-danger waves-effect"
+                                    <button type="button" class="btn btn-label-danger waves-effect delete-button"
                                         data-form="{{ $layanan->id }}">
                                         <span class="ti ti-trash me-1"></span>Hapus
                                     </button>

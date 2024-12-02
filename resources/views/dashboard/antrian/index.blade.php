@@ -40,13 +40,16 @@
                                 </a>
 
                                 {{-- Button Hapus --}}
-                                <form id="deleteForm-{{ $antrian->id }}" action="/dashboard/antrian/{{ $antrian->id }}" method="POST" class="m-0 p-0">
+                                <form id="{{ $antrian->id }}" action="/dashboard/antrian/{{ $antrian->id }}"
+                                    method="POST" class="m-0 p-0">
                                     @method('DELETE')
                                     @csrf
-                                    <button type="button" class="btn btn-label-danger waves-effect delete-button" data-id="{{ $antrian->id }}">
+                                    <button type="button" class="btn btn-label-danger waves-effect delete-button"
+                                        data-form="{{ $antrian->id }}">
                                         <span class="ti ti-trash me-1"></span>Hapus
                                     </button>
                                 </form>
+
                             </div>
                         </td>
                     </tr>
@@ -91,5 +94,4 @@
       })
     })
   </script>
-
 @endsection
