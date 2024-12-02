@@ -8,15 +8,16 @@
         <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
             <h3 class="m-0 font-weight-bold">Antrian Dukcapil</h3>
             {{-- Button trigger modal --}}
-            <button type="button" class="btn btn-primary waves-effect waves-light" data-bs-toggle="modal" data-bs-target="#modalCenter">
+            <button type="button" class="btn btn-warning waves-effect waves-light" data-bs-toggle="modal" data-bs-target="#modalCenter">
                 Tambah Antrian
             </button>
         </div>
 
         {{-- Data Table --}}
         <div class="table-responsive text-nowrap">
-            <table class="table" id="dataTable">
-                <thead>
+            <table class="table table-bordered" id="dataTable">
+                <caption class="ms-6">Daftar Antrian Aktif</caption>
+                <thead class="table-light">
                     <tr>
                         <th>No</th>
                         <th>Nama Antrian</th>

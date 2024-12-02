@@ -1,4 +1,4 @@
-@extends('auth.mainauth') <!-- Sesuaikan dengan layout utama -->
+@extends('layouts.mainauth') <!-- Sesuaikan dengan layout utama -->
 
 @section('content')
 <div class="container-xxl">

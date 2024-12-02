@@ -1,4 +1,4 @@
-@extends('auth.mainauth') <!-- Pastikan Anda menggunakan layout yang benar -->
+@extends('layouts.mainauth') <!-- Pastikan Anda menggunakan layout yang benar -->
 
 @section('content')
 <div class="authentication-wrapper authentication-basic px-6">

@@ -10,14 +10,17 @@
         <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
             <h3 class="m-0 font-weight-bold">Layanan Dukcapil</h3>
             <!-- Button trigger modal -->
-            <button type="button" class="btn btn-primary waves-effect waves-light" data-bs-toggle="modal"
+            <button type="button" class="btn btn-warning waves-effect waves-light" data-bs-toggle="modal"
                 data-bs-target="#modalCenter">
                 Tambah Layanan
             </button>
         </div>
         <div class="table-responsive text-nowrap">
-            <table class="table">
-                <thead>
+            <table class="table table-bordered">
+                <caption class="ms-6">
+                    Daftar Layanan
+                </caption>
+                <thead class="table-light">
                     <tr>
                         <th>No</th>
                         <th>Nama Layanan</th>
