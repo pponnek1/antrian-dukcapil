@@ -8,18 +8,22 @@ use App\Models\Layanan;
 use App\Models\Ambilantrian;
 use App\Models\User;
 use Cviebrock\EloquentSluggable\Sluggable;
+use Illuminate\Support\Str;
 
 class Antrian extends Model
 {
-    use HasFactory;
-    protected $fillable = ['nama_layanan', 'kode','deskripsi', 'slug', 'persyaratan', 'batas_antrian', 'users_id','layanans_id'];
+    use HasFactory, Sluggable;
+
+    protected $fillable = [
+        'nama_layanan', 'kode', 'deskripsi', 'slug', 'persyaratan', 'batas_antrian', 'users_id', 'layanans_id'
+    ];
 
     public function user()
     {
         return $this->belongsTo(User::class);
     }
 
-    public function Ambilantrians()
+    public function ambilantrians()
     {
         return $this->hasMany(Ambilantrian::class);
     }
@@ -38,9 +42,22 @@ class Antrian extends Model
     {
         return [
             'slug' => [
-                'source' => 'nama_antrian'
+                'source' => 'nama_layanan',
+                'onUpdate' => true
             ]
         ];
     }
 
+    protected static function boot()
+    {
+        parent::boot();
+
+        static::saving(function ($antrian) {
+            if (empty($antrian->slug)) {
+                $antrian->slug = Str::slug($antrian->nama_layanan);
+            }
+        });
+    }
+
+    // Optionally add additional methods like accessors/mutators, soft deletes, etc.
 }

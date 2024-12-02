@@ -6,6 +6,8 @@ use App\Http\Controllers\ScreenAddController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\dashboard\DashboardController;
 use App\Http\Controllers\dashboard\DashboardLayananController;
+use App\Http\Controllers\Dashboard\DashboardAntrianController;
+
 
 // Route::get('/', function () {
 //     return view('welcome');
@@ -26,7 +28,10 @@ Route::middleware('auth')->group(function () {
 Route::middleware(['auth', 'role:admin'])->group(function(){
     Route::get('/test',[HomeController::class, 'index']);
     Route::get('/dashboard',[DashboardController::class, 'index']);
-    route::resource('/dashboard/layanan', DashboardLayananController::class);
+    Route::get('/api/dashboard/antrian', [DashboardAntrianController::class, 'getAutoCompleteData']);
+    Route::get('/dashboard/antrian/checkSlug', [DashboardAntrianController::class,'checkSlug']);
+    Route::resource('/dashboard/layanan', DashboardLayananController::class);
+    Route::resource('/dashboard/antrian', DashboardAntrianController::class);
 });
 
 

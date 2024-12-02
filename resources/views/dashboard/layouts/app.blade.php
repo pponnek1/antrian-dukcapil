@@ -127,7 +127,6 @@
     <script src="{{ asset('assets/js/cards-advance.js') }}"></script>
 
     {{-- alert --}}
-    @include('sweetalert::alert')
 </body>
 
 </html>

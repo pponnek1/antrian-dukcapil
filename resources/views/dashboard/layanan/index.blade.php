@@ -8,7 +8,7 @@
     {{-- table --}}
     <div class="card">
         <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-            <h3 class="m-0 font-weight-bold">Layanan Disdukcapil</h3>
+            <h3 class="m-0 font-weight-bold">Layanan Dukcapil</h3>
             <!-- Button trigger modal -->
             <button type="button" class="btn btn-primary waves-effect waves-light" data-bs-toggle="modal"
                 data-bs-target="#modalCenter">
@@ -52,7 +52,7 @@
                                         <span class="ti ti-trash me-1"></span>Hapus
                                     </button>
                                 </form>
-                                
+
                             </div>
                         </td>
                     </tr>
